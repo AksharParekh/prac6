@@ -1,0 +1,27 @@
+﻿@model prac6_dnt.Models.Product
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+@{
+    Layout = null;
+}
+
+<h2> Product Details </h2>
+@if (Model != null)
+{
+    <p>Product Id: @Model.ProductId</p>
+    <p>Product Name: @Model.ProductName</p>
+    <p>Product Description: @Model.Description</p>
+    <p>Price: @Model.Price</p>
+    <p>Category: @Model.Category</p>
+}
+else
+{
+    <p>Product not found.</p>
+}
+<br />
+@Html.ActionLink("Back to Product Catalog", "Index", "Product")
+
+
